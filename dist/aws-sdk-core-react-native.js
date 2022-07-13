@@ -2927,7 +2927,7 @@ return /******/ (function(modules) { // webpackBootstrap
 	function XmlBuilder() { }
 
 	XmlBuilder.prototype.toXML = function(params, shape, rootElement, noEmpty) {
-	  var xml = builder.create(rootElement);
+	  var xml = builder.create(rootElement, { allowSurrogateChars: true });
 	  applyNamespaces(xml, shape);
 	  serialize(xml, params, shape);
 	  return xml.children.length > 0 || noEmpty ? xml.root().toString() : '';
