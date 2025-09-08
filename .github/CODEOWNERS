@@ -1,0 +1,10 @@
+# Order is important. The last matching pattern has the most precedence.
+# So if a pull request only touches javascript files, only these owners
+# will be requested to review.
+CODEOWNERS @BlueArchive/applications-frontend
+
+# Application source code
+*.js                         @BlueArchive/applications-frontend
+*.json                       @BlueArchive/applications-frontend
+*.md                         @BlueArchive/applications-frontend
+.*                           @BlueArchive/applications-frontend
